@@ -53,7 +53,6 @@ public class UserMealsUtil {
         for (UserMeal userMeal:mealList)
         {
             LocalDate localDate = userMeal.getDateTime().toLocalDate();
-
             if(meals.containsKey(localDate))
             {
                 meals.put(localDate,meals.get(localDate)+userMeal.getCalories());
