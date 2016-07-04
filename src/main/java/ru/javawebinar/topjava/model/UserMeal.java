@@ -27,6 +27,15 @@ public class UserMeal {
         return description;
     }
 
+    @Override
+    public String toString() {
+        return "UserMeal{" +
+                "dateTime=" + dateTime +
+                ", description='" + description + '\'' +
+                ", calories=" + calories +
+                '}';
+    }
+
     public int getCalories() {
         return calories;
     }
