@@ -1,5 +1,6 @@
 package ru.javawebinar.topjava.util;
 
+import org.slf4j.Logger;
 import ru.javawebinar.topjava.model.UserMeal;
 import ru.javawebinar.topjava.model.UserMealWithExceed;
 
