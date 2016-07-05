@@ -9,9 +9,37 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <title>списко еды</title>
+    <title>Meal list</title>
+    <style>
+        .normal {
+            color: green;
+        }
+
+        .exceeded {
+            color: red;
+        }
+    </style>
+
 </head>
 <body>
+<table border="1" cellpadding="15px" cellspacing="0px">
+    <tr>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Calories</th>
+    </tr>
+
+    <c:forEach items="${meallist}" var="meal">
+        <jsp:useBean id="meal" scope="page" type="ru.javawebinar.topjava.model.UserMealWithExceed"></jsp:useBean>
+        <tr class="${meal.exceed ? 'exceeded' : 'normal'}">
+            <td>${meal.dateTime}</td>
+            <td>${meal.description}</td>
+            <td>${meal.calories}</td>
+        </tr>
+
+    </c:forEach>
+</table>
+
 
 </body>
 </html>
